@@ -365,7 +365,8 @@ $(function(){
     if (dest.length== 0 || src.length == 0 || kg1.length == 0){
       alert('Please fill all fields');
     } else {
-      $.post("http://track.ems.dz/conx/select_type.php",
+
+      $.post("http://ems.dz/track/conx/select_type.php",
       {action:'tarif_national', src:src, dest:dest, kg1: kg1, crossDomain : true}, function(data, status){
           console.log(data);
           $('span#montant_ht').text(parseFloat(data) + ' DA');
